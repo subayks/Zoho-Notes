@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09E4C93725271372008E9448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93625271372008E9448 /* AppDelegate.swift */; };
+		09E4C93925271372008E9448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93825271372008E9448 /* SceneDelegate.swift */; };
+		09E4C93B25271372008E9448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93A25271372008E9448 /* ViewController.swift */; };
+		09E4C93E25271372008E9448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C93C25271372008E9448 /* Main.storyboard */; };
+		09E4C94125271373008E9448 /* Zoho_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */; };
+		09E4C94325271375008E9448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C94225271375008E9448 /* Assets.xcassets */; };
+		09E4C94625271375008E9448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C94425271375008E9448 /* LaunchScreen.storyboard */; };
+		09E4C95125271375008E9448 /* Zoho_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C95025271375008E9448 /* Zoho_NotesTests.swift */; };
+		09E4C95C25271375008E9448 /* Zoho_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C95B25271375008E9448 /* Zoho_NotesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09E4C94D25271375008E9448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09E4C92B25271372008E9448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E4C93225271372008E9448;
+			remoteInfo = "Zoho Notes";
+		};
+		09E4C95825271375008E9448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09E4C92B25271372008E9448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E4C93225271372008E9448;
+			remoteInfo = "Zoho Notes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09E4C93325271372008E9448 /* Zoho Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoho Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E4C93625271372008E9448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09E4C93825271372008E9448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		09E4C93A25271372008E9448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09E4C93D25271372008E9448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zoho_Notes.xcdatamodel; sourceTree = "<group>"; };
+		09E4C94225271375008E9448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09E4C94525271375008E9448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09E4C94725271375008E9448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E4C94C25271375008E9448 /* Zoho NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zoho NotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E4C95025271375008E9448 /* Zoho_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoho_NotesTests.swift; sourceTree = "<group>"; };
+		09E4C95225271375008E9448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E4C95725271375008E9448 /* Zoho NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zoho NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E4C95B25271375008E9448 /* Zoho_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoho_NotesUITests.swift; sourceTree = "<group>"; };
+		09E4C95D25271375008E9448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09E4C93025271372008E9448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C94925271375008E9448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C95425271375008E9448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E4C92A25271372008E9448 = {
+			isa = PBXGroup;
+			children = (
+				09E4C93525271372008E9448 /* Zoho Notes */,
+				09E4C94F25271375008E9448 /* Zoho NotesTests */,
+				09E4C95A25271375008E9448 /* Zoho NotesUITests */,
+				09E4C93425271372008E9448 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09E4C93425271372008E9448 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C93325271372008E9448 /* Zoho Notes.app */,
+				09E4C94C25271375008E9448 /* Zoho NotesTests.xctest */,
+				09E4C95725271375008E9448 /* Zoho NotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09E4C93525271372008E9448 /* Zoho Notes */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C93625271372008E9448 /* AppDelegate.swift */,
+				09E4C93825271372008E9448 /* SceneDelegate.swift */,
+				09E4C93A25271372008E9448 /* ViewController.swift */,
+				09E4C93C25271372008E9448 /* Main.storyboard */,
+				09E4C94225271375008E9448 /* Assets.xcassets */,
+				09E4C94425271375008E9448 /* LaunchScreen.storyboard */,
+				09E4C94725271375008E9448 /* Info.plist */,
+				09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */,
+			);
+			path = "Zoho Notes";
+			sourceTree = "<group>";
+		};
+		09E4C94F25271375008E9448 /* Zoho NotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C95025271375008E9448 /* Zoho_NotesTests.swift */,
+				09E4C95225271375008E9448 /* Info.plist */,
+			);
+			path = "Zoho NotesTests";
+			sourceTree = "<group>";
+		};
+		09E4C95A25271375008E9448 /* Zoho NotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C95B25271375008E9448 /* Zoho_NotesUITests.swift */,
+				09E4C95D25271375008E9448 /* Info.plist */,
+			);
+			path = "Zoho NotesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09E4C93225271372008E9448 /* Zoho Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E4C96025271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho Notes" */;
+			buildPhases = (
+				09E4C92F25271372008E9448 /* Sources */,
+				09E4C93025271372008E9448 /* Frameworks */,
+				09E4C93125271372008E9448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zoho Notes";
+			productName = "Zoho Notes";
+			productReference = 09E4C93325271372008E9448 /* Zoho Notes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09E4C94B25271375008E9448 /* Zoho NotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E4C96325271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho NotesTests" */;
+			buildPhases = (
+				09E4C94825271375008E9448 /* Sources */,
+				09E4C94925271375008E9448 /* Frameworks */,
+				09E4C94A25271375008E9448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E4C94E25271375008E9448 /* PBXTargetDependency */,
+			);
+			name = "Zoho NotesTests";
+			productName = "Zoho NotesTests";
+			productReference = 09E4C94C25271375008E9448 /* Zoho NotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09E4C95625271375008E9448 /* Zoho NotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E4C96625271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho NotesUITests" */;
+			buildPhases = (
+				09E4C95325271375008E9448 /* Sources */,
+				09E4C95425271375008E9448 /* Frameworks */,
+				09E4C95525271375008E9448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E4C95925271375008E9448 /* PBXTargetDependency */,
+			);
+			name = "Zoho NotesUITests";
+			productName = "Zoho NotesUITests";
+			productReference = 09E4C95725271375008E9448 /* Zoho NotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09E4C92B25271372008E9448 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Subendran;
+				TargetAttributes = {
+					09E4C93225271372008E9448 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					09E4C94B25271375008E9448 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 09E4C93225271372008E9448;
+					};
+					09E4C95625271375008E9448 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 09E4C93225271372008E9448;
+					};
+				};
+			};
+			buildConfigurationList = 09E4C92E25271372008E9448 /* Build configuration list for PBXProject "Zoho Notes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09E4C92A25271372008E9448;
+			productRefGroup = 09E4C93425271372008E9448 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09E4C93225271372008E9448 /* Zoho Notes */,
+				09E4C94B25271375008E9448 /* Zoho NotesTests */,
+				09E4C95625271375008E9448 /* Zoho NotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09E4C93125271372008E9448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E4C94625271375008E9448 /* LaunchScreen.storyboard in Resources */,
+				09E4C94325271375008E9448 /* Assets.xcassets in Resources */,
+				09E4C93E25271372008E9448 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C94A25271375008E9448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C95525271375008E9448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09E4C92F25271372008E9448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E4C93B25271372008E9448 /* ViewController.swift in Sources */,
+				09E4C93725271372008E9448 /* AppDelegate.swift in Sources */,
+				09E4C93925271372008E9448 /* SceneDelegate.swift in Sources */,
+				09E4C94125271373008E9448 /* Zoho_Notes.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C94825271375008E9448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E4C95125271375008E9448 /* Zoho_NotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E4C95325271375008E9448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E4C95C25271375008E9448 /* Zoho_NotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09E4C94E25271375008E9448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E4C93225271372008E9448 /* Zoho Notes */;
+			targetProxy = 09E4C94D25271375008E9448 /* PBXContainerItemProxy */;
+		};
+		09E4C95925271375008E9448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E4C93225271372008E9448 /* Zoho Notes */;
+			targetProxy = 09E4C95825271375008E9448 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09E4C93C25271372008E9448 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09E4C93D25271372008E9448 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09E4C94425271375008E9448 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09E4C94525271375008E9448 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09E4C95E25271375008E9448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09E4C95F25271375008E9448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09E4C96125271375008E9448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho Notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09E4C96225271375008E9448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho Notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09E4C96425271375008E9448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho NotesTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zoho Notes.app/Zoho Notes";
+			};
+			name = Debug;
+		};
+		09E4C96525271375008E9448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho NotesTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zoho Notes.app/Zoho Notes";
+			};
+			name = Release;
+		};
+		09E4C96725271375008E9448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho NotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-NotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Zoho Notes";
+			};
+			name = Debug;
+		};
+		09E4C96825271375008E9448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Zoho NotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Subay.com.Zoho-NotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Zoho Notes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09E4C92E25271372008E9448 /* Build configuration list for PBXProject "Zoho Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E4C95E25271375008E9448 /* Debug */,
+				09E4C95F25271375008E9448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E4C96025271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E4C96125271375008E9448 /* Debug */,
+				09E4C96225271375008E9448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E4C96325271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho NotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E4C96425271375008E9448 /* Debug */,
+				09E4C96525271375008E9448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E4C96625271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho NotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E4C96725271375008E9448 /* Debug */,
+				09E4C96825271375008E9448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */,
+			);
+			currentVersion = 09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */;
+			path = Zoho_Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 09E4C92B25271372008E9448 /* Project object */;
+}
