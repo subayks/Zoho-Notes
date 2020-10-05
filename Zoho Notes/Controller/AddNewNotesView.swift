@@ -19,8 +19,9 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     public var completion: ((NotesData)-> Void)?
     var notesData = NotesData()
-      let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
+    let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
     let attachmentButton = UIBarButtonItem(title: "Pic", style: .done, target: self, action: #selector(didAttachmentTapped))
+    
     //MARK:- view life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,9 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
         self.notesTextView.delegate = self
         self.notesTextView.text = "Type Something..."
         notesTextView.textColor = UIColor.lightGray
-        titleTextField.becomeFirstResponder()
-      self.attachmentButton.tintColor = .darkGray
+        titleTextField.becomeFirstResponder() 
+        self.attachmentButton.tintColor = .darkGray
         self.saveButton.tintColor = .darkGray
-
-        
         navigationItem.rightBarButtonItems = [saveButton,attachmentButton]
         self.imageViewHeighrConstraints.constant = 0
         self.imageViewTopConstraint.constant = 0
