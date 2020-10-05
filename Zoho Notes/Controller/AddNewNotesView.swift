@@ -19,7 +19,8 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     public var completion: ((NotesData)-> Void)?
     var notesData = NotesData()
-    
+      let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
+    let attachmentButton = UIBarButtonItem(title: "Pic", style: .done, target: self, action: #selector(didAttachmentTapped))
     //MARK:- view life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,10 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
         self.notesTextView.text = "Type Something..."
         notesTextView.textColor = UIColor.lightGray
         titleTextField.becomeFirstResponder()
-        let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
-        let attachmentButton = UIBarButtonItem(title: "Pic", style: .done, target: self, action: #selector(didAttachmentTapped))
+      self.attachmentButton.tintColor = .darkGray
+        self.saveButton.tintColor = .darkGray
+
+        
         navigationItem.rightBarButtonItems = [saveButton,attachmentButton]
         self.imageViewHeighrConstraints.constant = 0
         self.imageViewTopConstraint.constant = 0
@@ -86,6 +89,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let chosenImage =  UIImage.from(info: info)
         self.attachmentImage.image = chosenImage
+        self.attachmentButton.tintColor = .green
         self.imageViewHeighrConstraints.constant = 125
         self.imageViewTopConstraint.constant = 10
         dismiss(animated: true, completion: nil)
