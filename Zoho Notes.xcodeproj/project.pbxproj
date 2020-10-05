@@ -14,7 +14,6 @@
 		0941E0CA252B4C03005A42BC /* imageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C9252B4C03005A42BC /* imageViewViewController.swift */; };
 		0941E0CC252B6BEA005A42BC /* DisplayImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0CB252B6BEA005A42BC /* DisplayImageViewController.swift */; };
 		0941E0CE252B6FC2005A42BC /* DisplayImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0CD252B6FC2005A42BC /* DisplayImageViewModel.swift */; };
-		0942730325298AA400249F01 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */; };
 		09E4C93725271372008E9448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93625271372008E9448 /* AppDelegate.swift */; };
 		09E4C93925271372008E9448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93825271372008E9448 /* SceneDelegate.swift */; };
 		09E4C93B25271372008E9448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93A25271372008E9448 /* ViewController.swift */; };
@@ -61,7 +60,6 @@
 		0941E0C9252B4C03005A42BC /* imageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewViewController.swift; sourceTree = "<group>"; };
 		0941E0CB252B6BEA005A42BC /* DisplayImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewController.swift; sourceTree = "<group>"; };
 		0941E0CD252B6FC2005A42BC /* DisplayImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewModel.swift; sourceTree = "<group>"; };
-		0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		09E4C93325271372008E9448 /* Zoho Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoho Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E4C93625271372008E9448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E4C93825271372008E9448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				09E4C96F25272931008E9448 /* NotesCollectionViewCell.swift */,
-				0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -441,7 +438,6 @@
 				09E4C9872527B0C6008E9448 /* Zoho_Notes.xcdatamodel in Sources */,
 				0941E0CC252B6BEA005A42BC /* DisplayImageViewController.swift in Sources */,
 				0941E0CE252B6FC2005A42BC /* DisplayImageViewModel.swift in Sources */,
-				0942730325298AA400249F01 /* ImagesCollectionViewCell.swift in Sources */,
 				09E4C9722527327E008E9448 /* ViewNotesViewController.swift in Sources */,
 				09E4C98125278F6F008E9448 /* NetworkAdapter.swift in Sources */,
 				094016572528CAA000D79294 /* AnimationController.swift in Sources */,
