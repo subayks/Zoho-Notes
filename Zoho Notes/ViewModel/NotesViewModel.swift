@@ -107,7 +107,7 @@ class NotesViewModel {
         return self.retrieveSavedUsers()
     }
     
-    
+   //Method to store in core data
     func saveUserData(user: NotesData,newUser:NSManagedObject) {
         newUser.setValue(user.title, forKey: "title")
         newUser.setValue(user.notes, forKey: "notes")
@@ -116,6 +116,7 @@ class NotesViewModel {
         newUser.setValue(user.id, forKey: "id")
     }
     
+    //Method to retrive data from Core data
     func retrieveSavedUsers() -> [NotesData]? {
         guard let context = self.getContext() else { return nil}
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ZohoNotes")
@@ -148,10 +149,12 @@ class NotesViewModel {
         return retrievedUsers
     }
     
+    //Method to find selected notes
     func selectedNotes(index:Int) -> NotesData {
         return self.model[index]
     }
     
+    //Method to create viewNotesviewModel
     func createViewNotesViewModel(index:Int) -> ViewNotesViewModel {
         return  ViewNotesViewModel.init(model: self.model, selectedIndex: index)
     }

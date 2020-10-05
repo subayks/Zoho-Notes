@@ -90,7 +90,6 @@ class ViewNotesViewController: UIViewController,NVActivityIndicatorViewable {
         guard let vc = storyboard?.instantiateViewController(identifier: "ViewImageViewController") as? ViewImageViewController else {
             return
         }
-        
         vc.modalPresentationStyle = .custom
         self.viewModel?.getImageArrayWithIndex()
         vc.viewModel = viewModel?.createViewImageviewModel()

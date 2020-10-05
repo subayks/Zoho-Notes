@@ -42,14 +42,12 @@ class ViewNotesViewModel {
         return replacementText
     }
     
+    //method to get images array
     func getImageArrayWithIndex() {
-        if let  modelValue = self.model {
-            for values in modelValue {
-                if values.image != "" {
-                    imageNotes.append(values)
-                }
+        let imageNote = self.model?.filter{ (values) -> Bool in
+            values.image != ""
             }
-        }
+        self.imageNotes = imageNote ?? []
         for i in 0..<imageNotes.count {
             if imageNotes[i].image == self.imageSelected {
                 self.indexOfImage = i
@@ -57,6 +55,7 @@ class ViewNotesViewModel {
         }
     }
     
+    //Method to create view image viewmodel
     func createViewImageviewModel() -> ViewImageViewModel {
         return ViewImageViewModel.init(model:self.imageNotes , selectedIndex: indexOfImage)
     }
