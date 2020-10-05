@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094016572528CAA000D79294 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094016562528CAA000D79294 /* AnimationController.swift */; };
+		0941E0C3252AF654005A42BC /* ViewNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C2252AF654005A42BC /* ViewNotesViewModel.swift */; };
+		0941E0C5252B0045005A42BC /* ViewImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C4252B0045005A42BC /* ViewImageViewModel.swift */; };
+		0941E0C8252B07C7005A42BC /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C7252B07C7005A42BC /* Extension+String.swift */; };
+		0942730325298AA400249F01 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */; };
 		09E4C93725271372008E9448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93625271372008E9448 /* AppDelegate.swift */; };
 		09E4C93925271372008E9448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93825271372008E9448 /* SceneDelegate.swift */; };
 		09E4C93B25271372008E9448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93A25271372008E9448 /* ViewController.swift */; };
 		09E4C93E25271372008E9448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C93C25271372008E9448 /* Main.storyboard */; };
-		09E4C94125271373008E9448 /* Zoho_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */; };
 		09E4C94325271375008E9448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C94225271375008E9448 /* Assets.xcassets */; };
 		09E4C94625271375008E9448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E4C94425271375008E9448 /* LaunchScreen.storyboard */; };
 		09E4C95125271375008E9448 /* Zoho_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C95025271375008E9448 /* Zoho_NotesTests.swift */; };
 		09E4C95C25271375008E9448 /* Zoho_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C95B25271375008E9448 /* Zoho_NotesUITests.swift */; };
+		09E4C96B25271E4B008E9448 /* AddNewNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C96A25271E4B008E9448 /* AddNewNotesView.swift */; };
+		09E4C97025272931008E9448 /* NotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C96F25272931008E9448 /* NotesCollectionViewCell.swift */; };
+		09E4C9722527327E008E9448 /* ViewNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C9712527327E008E9448 /* ViewNotesViewController.swift */; };
+		09E4C97A25278768008E9448 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C97925278768008E9448 /* Reachability.swift */; };
+		09E4C97C252787C5008E9448 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C97B252787C5008E9448 /* NotesModel.swift */; };
+		09E4C97E2527894F008E9448 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C97D2527894F008E9448 /* NotesViewModel.swift */; };
+		09E4C98125278F6F008E9448 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C98025278F6F008E9448 /* NetworkAdapter.swift */; };
+		09E4C98325279097008E9448 /* HTTPClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C98225279097008E9448 /* HTTPClass.swift */; };
+		09E4C9872527B0C6008E9448 /* Zoho_Notes.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C9862527B0C6008E9448 /* Zoho_Notes.xcdatamodel */; };
+		09EF56F3252A4EE60064BEBF /* ViewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF56F2252A4EE60064BEBF /* ViewImageViewController.swift */; };
+		A5D496A2D36086B4648A33B2 /* Pods_Zoho_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EB216A76A64C06CABC7EF2 /* Pods_Zoho_Notes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094016562528CAA000D79294 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		0941E0C2252AF654005A42BC /* ViewNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotesViewModel.swift; sourceTree = "<group>"; };
+		0941E0C4252B0045005A42BC /* ViewImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImageViewModel.swift; sourceTree = "<group>"; };
+		0941E0C7252B07C7005A42BC /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		09E4C93325271372008E9448 /* Zoho Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoho Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E4C93625271372008E9448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E4C93825271372008E9448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09E4C93A25271372008E9448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09E4C93D25271372008E9448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zoho_Notes.xcdatamodel; sourceTree = "<group>"; };
 		09E4C94225271375008E9448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E4C94525271375008E9448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E4C94725271375008E9448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +70,19 @@
 		09E4C95725271375008E9448 /* Zoho NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zoho NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E4C95B25271375008E9448 /* Zoho_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoho_NotesUITests.swift; sourceTree = "<group>"; };
 		09E4C95D25271375008E9448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E4C96A25271E4B008E9448 /* AddNewNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNotesView.swift; sourceTree = "<group>"; };
+		09E4C96F25272931008E9448 /* NotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCollectionViewCell.swift; sourceTree = "<group>"; };
+		09E4C9712527327E008E9448 /* ViewNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotesViewController.swift; sourceTree = "<group>"; };
+		09E4C97925278768008E9448 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		09E4C97B252787C5008E9448 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
+		09E4C97D2527894F008E9448 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		09E4C98025278F6F008E9448 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		09E4C98225279097008E9448 /* HTTPClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClass.swift; sourceTree = "<group>"; };
+		09E4C9862527B0C6008E9448 /* Zoho_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Zoho_Notes.xcdatamodel; path = Zoho_Notes.xcdatamodeld/Zoho_Notes.xcdatamodel; sourceTree = "<group>"; };
+		09EF56F2252A4EE60064BEBF /* ViewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImageViewController.swift; sourceTree = "<group>"; };
+		0F3BE946780DC96189D8D3B3 /* Pods-Zoho Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoho Notes.release.xcconfig"; path = "Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes.release.xcconfig"; sourceTree = "<group>"; };
+		55EB216A76A64C06CABC7EF2 /* Pods_Zoho_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zoho_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFEB4A0F7CCC78B1EA27FE0 /* Pods-Zoho Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoho Notes.debug.xcconfig"; path = "Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D496A2D36086B4648A33B2 /* Pods_Zoho_Notes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0941E0C6252B07AD005A42BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				094016562528CAA000D79294 /* AnimationController.swift */,
+				0941E0C7252B07C7005A42BC /* Extension+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		09E4C92A25271372008E9448 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,8 @@
 				09E4C94F25271375008E9448 /* Zoho NotesTests */,
 				09E4C95A25271375008E9448 /* Zoho NotesUITests */,
 				09E4C93425271372008E9448 /* Products */,
+				F5FD1E8065B34B1682DF723B /* Pods */,
+				1206EACDAE5003BE36FE0916 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +145,20 @@
 		09E4C93525271372008E9448 /* Zoho Notes */ = {
 			isa = PBXGroup;
 			children = (
+				0941E0C6252B07AD005A42BC /* Extensions */,
+				09E4C97F25278F52008E9448 /* Network */,
+				09E4C96E252728D2008E9448 /* Cell */,
+				09E4C96D25271EE8008E9448 /* ViewModel */,
+				09E4C96C25271EE1008E9448 /* Model */,
+				09E4C96925271E25008E9448 /* Controller */,
 				09E4C93625271372008E9448 /* AppDelegate.swift */,
 				09E4C93825271372008E9448 /* SceneDelegate.swift */,
-				09E4C93A25271372008E9448 /* ViewController.swift */,
 				09E4C93C25271372008E9448 /* Main.storyboard */,
 				09E4C94225271375008E9448 /* Assets.xcassets */,
 				09E4C94425271375008E9448 /* LaunchScreen.storyboard */,
 				09E4C94725271375008E9448 /* Info.plist */,
-				09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */,
+				09E4C9862527B0C6008E9448 /* Zoho_Notes.xcdatamodel */,
+				09E4C97925278768008E9448 /* Reachability.swift */,
 			);
 			path = "Zoho Notes";
 			sourceTree = "<group>";
@@ -131,6 +181,70 @@
 			path = "Zoho NotesUITests";
 			sourceTree = "<group>";
 		};
+		09E4C96925271E25008E9448 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C93A25271372008E9448 /* ViewController.swift */,
+				09E4C96A25271E4B008E9448 /* AddNewNotesView.swift */,
+				09E4C9712527327E008E9448 /* ViewNotesViewController.swift */,
+				09EF56F2252A4EE60064BEBF /* ViewImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09E4C96C25271EE1008E9448 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C97B252787C5008E9448 /* NotesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09E4C96D25271EE8008E9448 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C97D2527894F008E9448 /* NotesViewModel.swift */,
+				0941E0C2252AF654005A42BC /* ViewNotesViewModel.swift */,
+				0941E0C4252B0045005A42BC /* ViewImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09E4C96E252728D2008E9448 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C96F25272931008E9448 /* NotesCollectionViewCell.swift */,
+				0942730225298AA400249F01 /* ImagesCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		09E4C97F25278F52008E9448 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09E4C98025278F6F008E9448 /* NetworkAdapter.swift */,
+				09E4C98225279097008E9448 /* HTTPClass.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1206EACDAE5003BE36FE0916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55EB216A76A64C06CABC7EF2 /* Pods_Zoho_Notes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5FD1E8065B34B1682DF723B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DFEB4A0F7CCC78B1EA27FE0 /* Pods-Zoho Notes.debug.xcconfig */,
+				0F3BE946780DC96189D8D3B3 /* Pods-Zoho Notes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09E4C96025271375008E9448 /* Build configuration list for PBXNativeTarget "Zoho Notes" */;
 			buildPhases = (
+				1EA95DD6FF9A852D0C164259 /* [CP] Check Pods Manifest.lock */,
 				09E4C92F25271372008E9448 /* Sources */,
 				09E4C93025271372008E9448 /* Frameworks */,
 				09E4C93125271372008E9448 /* Resources */,
+				6BDAFF7BEADE954A858EFF22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,6 +373,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EA95DD6FF9A852D0C164259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zoho Notes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BDAFF7BEADE954A858EFF22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09E4C92F25271372008E9448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,7 +423,21 @@
 				09E4C93B25271372008E9448 /* ViewController.swift in Sources */,
 				09E4C93725271372008E9448 /* AppDelegate.swift in Sources */,
 				09E4C93925271372008E9448 /* SceneDelegate.swift in Sources */,
-				09E4C94125271373008E9448 /* Zoho_Notes.xcdatamodeld in Sources */,
+				09E4C97E2527894F008E9448 /* NotesViewModel.swift in Sources */,
+				0941E0C3252AF654005A42BC /* ViewNotesViewModel.swift in Sources */,
+				0941E0C8252B07C7005A42BC /* Extension+String.swift in Sources */,
+				09E4C96B25271E4B008E9448 /* AddNewNotesView.swift in Sources */,
+				09EF56F3252A4EE60064BEBF /* ViewImageViewController.swift in Sources */,
+				0941E0C5252B0045005A42BC /* ViewImageViewModel.swift in Sources */,
+				09E4C9872527B0C6008E9448 /* Zoho_Notes.xcdatamodel in Sources */,
+				0942730325298AA400249F01 /* ImagesCollectionViewCell.swift in Sources */,
+				09E4C9722527327E008E9448 /* ViewNotesViewController.swift in Sources */,
+				09E4C98125278F6F008E9448 /* NetworkAdapter.swift in Sources */,
+				094016572528CAA000D79294 /* AnimationController.swift in Sources */,
+				09E4C97A25278768008E9448 /* Reachability.swift in Sources */,
+				09E4C98325279097008E9448 /* HTTPClass.swift in Sources */,
+				09E4C97025272931008E9448 /* NotesCollectionViewCell.swift in Sources */,
+				09E4C97C252787C5008E9448 /* NotesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +608,7 @@
 		};
 		09E4C96125271375008E9448 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DFEB4A0F7CCC78B1EA27FE0 /* Pods-Zoho Notes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +626,7 @@
 		};
 		09E4C96225271375008E9448 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3BE946780DC96189D8D3B3 /* Pods-Zoho Notes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -588,19 +762,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		09E4C93F25271373008E9448 /* Zoho_Notes.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */,
-			);
-			currentVersion = 09E4C94025271373008E9448 /* Zoho_Notes.xcdatamodel */;
-			path = Zoho_Notes.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 09E4C92B25271372008E9448 /* Project object */;
 }

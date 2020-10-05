@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-Zoho Notes/Pods-Zoho Notes-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
+${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework
+${BUILT_PRODUCTS_DIR}/Markup/Markup.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
