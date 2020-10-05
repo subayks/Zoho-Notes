@@ -8,7 +8,6 @@
 
 import Foundation
 class ViewNotesViewModel {
-    var notesData = NotesData()
     var selectedIndex = Int()
     var imageSelected =  String()
     var model : [NotesData]?
@@ -17,12 +16,12 @@ class ViewNotesViewModel {
     var indexOfImage = Int()
     var imageNotes = [NotesData]()
     
-    init(model:[NotesData],notesData:NotesData) {
+    init(model:[NotesData],selectedIndex:Int) {
         self.model = model
-        self.notesData = notesData
+        self.selectedIndex = selectedIndex
     }
     //MARK:- Replace Url with hyper link
-    func replaceUrl() ->String {
+    func replaceUrl(notesData:NotesData) ->String {
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         let matches = detector.matches(in: notesData.notes, options: [], range: NSRange(location: 0, length: notesData.notes.utf16.count))
         

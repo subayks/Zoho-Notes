@@ -32,53 +32,55 @@ class ViewNotesViewController: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
         self.view.backgroundColor = .black
         self.notesLabel.backgroundColor = .black
-        setUpView()
+        if let viewModel = self.viewModel , let model = self.viewModel?.model {
+            self.setUpView(notesData: model[viewModel.selectedIndex])
+        }
     }
     //MARK:- Setup view
-    func setUpView() {
+    func setUpView(notesData:NotesData) {
         if let viewModel = self.viewModel {
-        self.titleLabel.text = viewModel.notesData.title
-        let notes = viewModel.replaceUrl()
-        
-        let renderer = MarkupRenderer(baseFont: .systemFont(ofSize: 16))
-        let attributedText = renderer.render(text: notes)
-        
-        let linkedText = NSMutableAttributedString(attributedString: attributedText)
-        
-        let hyperlinked = linkedText.setAsLink(textToFind: viewModel.urlButtonName, linkURL: viewModel.url)
-        
-        if hyperlinked {
-            self.notesLabel.attributedText = NSAttributedString(attributedString: linkedText)
-        } else {
-            self.notesLabel.attributedText = attributedText
-        }
-        self.notesLabel.dataDetectorTypes = UIDataDetectorTypes.all
-        
-        self.notesLabel.textColor = UIColor.lightGray
-        notesLabel.linkTextAttributes = [
-            .foregroundColor: UIColor.gray,
-            .underlineStyle: NSNumber(value: true)
-        ]
-        
-        if viewModel.notesData.image == "" {
-            self.imageViewTopConstraints.constant = 0
-            self.immageViewHeightConstraint.constant = 0
-        } else {
-            self.imageViewTopConstraints.constant = 10
-            self.immageViewHeightConstraint.constant = 125
-            if viewModel.notesData.image.contains("https") {
-                self.imageViewPickedImage.sd_setImage(with: URL(string: viewModel.notesData.image))
+            self.titleLabel.text = notesData.title
+            let notes = viewModel.replaceUrl(notesData: notesData)
+            
+            let renderer = MarkupRenderer(baseFont: .systemFont(ofSize: 16))
+            let attributedText = renderer.render(text: notes)
+            
+            let linkedText = NSMutableAttributedString(attributedString: attributedText)
+            
+            let hyperlinked = linkedText.setAsLink(textToFind: viewModel.urlButtonName, linkURL: viewModel.url)
+            
+            if hyperlinked {
+                self.notesLabel.attributedText = NSAttributedString(attributedString: linkedText)
             } else {
-                self.imageViewPickedImage.image = viewModel.notesData.image.toImage()
-                
+                self.notesLabel.attributedText = attributedText
             }
-            viewModel.imageSelected = viewModel.notesData.image
-        }
-        
-        self.date.text = viewModel.notesData.date
-        imageViewPickedImage.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(imageClicked))
-        imageViewPickedImage.addGestureRecognizer(tap)
+            self.notesLabel.dataDetectorTypes = UIDataDetectorTypes.all
+            
+            self.notesLabel.textColor = UIColor.lightGray
+            notesLabel.linkTextAttributes = [
+                .foregroundColor: UIColor.gray,
+                .underlineStyle: NSNumber(value: true)
+            ]
+            
+            if notesData.image == "" {
+                self.imageViewTopConstraints.constant = 0
+                self.immageViewHeightConstraint.constant = 0
+            } else {
+                self.imageViewTopConstraints.constant = 10
+                self.immageViewHeightConstraint.constant = 125
+                if notesData.image.contains("https") {
+                    self.imageViewPickedImage.sd_setImage(with: URL(string: notesData.image))
+                } else {
+                    self.imageViewPickedImage.image = notesData.image.toImage()
+                    
+                }
+                viewModel.imageSelected = notesData.image
+            }
+            
+            self.date.text = notesData.date
+            imageViewPickedImage.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(imageClicked))
+            imageViewPickedImage.addGestureRecognizer(tap)
         }
     }
     
@@ -97,32 +99,24 @@ class ViewNotesViewController: UIViewController,NVActivityIndicatorViewable {
     
     //MARK:- swipe gestire for view
     @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer)  {
-        if let viewModel = self.viewModel {
-
-        if sender.direction == .right {
-            if viewModel.selectedIndex > 0 {
-                viewModel.selectedIndex = viewModel.selectedIndex - 1
-                let notes = viewModel.model?[viewModel.selectedIndex]
-                if (notes?.image.contains("https"))! {
-                    // self.displayImage.sd_setImage(with: URL(string: notes?.image ?? ""))
-                } else {
-                    //  self.displayImage.image = notes?.image.toImage()
+        if let viewModel = self.viewModel , let model = self.viewModel?.model{
+            
+            if sender.direction == .right {
+                if viewModel.selectedIndex > 0 {
+                    viewModel.selectedIndex = viewModel.selectedIndex - 1
+                    let notes = model[viewModel.selectedIndex]
+                    self.setUpView(notesData: notes)
                 }
-            }
-            
-            
-        } else {
-            if viewModel.selectedIndex < viewModel.model!.count - 1 {
-                viewModel.selectedIndex = viewModel.selectedIndex + 1
                 
-                let notes = viewModel.model?[viewModel.selectedIndex]
-                if (notes?.image.contains("https"))! {
-                    //      self.displayImage.sd_setImage(with: URL(string: notes?.image ?? ""))
-                } else {
-                    //    self.displayImage.image = notes?.image.toImage()
+                
+            } else {
+                if viewModel.selectedIndex < viewModel.model!.count - 1 {
+                    viewModel.selectedIndex = viewModel.selectedIndex + 1
+                    
+                    let notes = model[viewModel.selectedIndex]
+                    self.setUpView(notesData: notes)
                 }
             }
-        }
         }
     }
 }

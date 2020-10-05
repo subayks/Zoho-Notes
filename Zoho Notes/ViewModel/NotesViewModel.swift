@@ -153,7 +153,7 @@ class NotesViewModel {
     }
     
     func createViewNotesViewModel(index:Int) -> ViewNotesViewModel {
-        return  ViewNotesViewModel.init(model: self.model, notesData: self.model[index])
+        return  ViewNotesViewModel.init(model: self.model, selectedIndex: index)
     }
     
     // Helper func for getting the current context.
