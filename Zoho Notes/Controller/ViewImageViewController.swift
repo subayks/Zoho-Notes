@@ -11,7 +11,7 @@ import SDWebImage
 
 class ViewImageViewController: UIViewController {
     @IBOutlet weak var displayImage: UIImageView!
-    var viewModel: ViewImageViewModel?
+    var viewModel: ViewImageViewModel?vaj
     
     //MARK:- View life cycle
     override func viewDidLoad() {

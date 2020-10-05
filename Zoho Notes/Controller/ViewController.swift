@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
 import NVActivityIndicatorView
 import CoreData
 

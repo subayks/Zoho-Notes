@@ -1,6 +1,5 @@
 //
 //  Reachability.swift
-//  Vajro
 
 import Foundation
 import SystemConfiguration
