@@ -16,6 +16,8 @@ class ViewImageViewController: UIViewController {
     //MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+       // transitioningDelegate = self
+        
         self.displayImage.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
         setupvalues()
@@ -67,4 +69,15 @@ class ViewImageViewController: UIViewController {
         }
     }
     
+}
+
+extension ViewImageViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return AnimationController(animationDuration: 3.5, animationtype: .present)
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return AnimationController(animationDuration: 3.5, animationtype: .dismiss)
+        
+    }
 }
