@@ -31,7 +31,7 @@ class ViewNotesViewModel {
             self.url = String(url)
             print(url)
         }
-        let replacementText = notesData.notes.replacingOccurrences(of: self.url, with: "")
+        var replacementText = notesData.notes
         if self.url != "" {
             if let r1 = replacementText.range(of: "[")?.upperBound,
                 let r2 = replacementText.range(of: "]")?.lowerBound {
@@ -39,14 +39,19 @@ class ViewNotesViewModel {
                 self.urlButtonName = String(replacementText[r1..<r2])
             }
         }
-        return replacementText
+        
+        if self.urlButtonName != "" {
+            replacementText = replacementText.replacingOccurrences(of: self.url, with: "")
+        }
+        
+        return replacementText.replacingOccurrences(of: "[\\[\\]()]", with: "", options: .regularExpression, range: nil)
     }
     
     //method to get images array
     func getImageArrayWithIndex() {
         let imageNote = self.model?.filter{ (values) -> Bool in
             values.image != ""
-            }
+        }
         self.imageNotes = imageNote ?? []
         for i in 0..<imageNotes.count {
             if imageNotes[i].image == self.imageSelected {
