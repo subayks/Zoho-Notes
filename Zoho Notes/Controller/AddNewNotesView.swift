@@ -19,8 +19,8 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     public var completion: ((NotesData)-> Void)?
     var notesData = NotesData()
-    let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
-    let attachmentButton = UIBarButtonItem(title: "Picture", style: .done, target: self, action: #selector(didAttachmentTapped))
+    lazy var saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
+    lazy var attachmentButton = UIBarButtonItem(title: "Picture", style: .done, target: self, action: #selector(didAttachmentTapped))
     
     //MARK:- view life Cycle
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
-        return true
+        return false
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -84,9 +84,9 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     
     //MARK:- Open photos
     func openGallary() {
-        self.titleTextField.resignFirstResponder()
         DispatchQueue.main.async {
-            
+            self.titleTextField.resignFirstResponder()
+
             self.picker!.allowsEditing = false
             self.picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
             self.present(self.picker!, animated: true, completion: nil)
