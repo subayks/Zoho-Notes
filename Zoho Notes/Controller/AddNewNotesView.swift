@@ -136,6 +136,11 @@ extension UIImage {
         }
         return imageToBeReturned
     }
+    
+    func toString() -> String? {
+        let data: Data? = self.pngData()
+        return data?.base64EncodedString(options: .endLineWithLineFeed)
+    }
 }
 
 extension String {
@@ -144,12 +149,5 @@ extension String {
             return UIImage(data: data)
         }
         return nil
-    }
-}
-
-extension UIImage {
-    func toString() -> String? {
-        let data: Data? = self.pngData()
-        return data?.base64EncodedString(options: .endLineWithLineFeed)
     }
 }
