@@ -11,7 +11,6 @@
 		0941E0C3252AF654005A42BC /* ViewNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C2252AF654005A42BC /* ViewNotesViewModel.swift */; };
 		0941E0C5252B0045005A42BC /* ViewImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C4252B0045005A42BC /* ViewImageViewModel.swift */; };
 		0941E0C8252B07C7005A42BC /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C7252B07C7005A42BC /* Extension+String.swift */; };
-		0941E0CA252B4C03005A42BC /* imageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0C9252B4C03005A42BC /* imageViewViewController.swift */; };
 		0941E0CC252B6BEA005A42BC /* DisplayImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0CB252B6BEA005A42BC /* DisplayImageViewController.swift */; };
 		0941E0CE252B6FC2005A42BC /* DisplayImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E0CD252B6FC2005A42BC /* DisplayImageViewModel.swift */; };
 		09E4C93725271372008E9448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4C93625271372008E9448 /* AppDelegate.swift */; };
@@ -57,7 +56,6 @@
 		0941E0C2252AF654005A42BC /* ViewNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotesViewModel.swift; sourceTree = "<group>"; };
 		0941E0C4252B0045005A42BC /* ViewImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImageViewModel.swift; sourceTree = "<group>"; };
 		0941E0C7252B07C7005A42BC /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
-		0941E0C9252B4C03005A42BC /* imageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewViewController.swift; sourceTree = "<group>"; };
 		0941E0CB252B6BEA005A42BC /* DisplayImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewController.swift; sourceTree = "<group>"; };
 		0941E0CD252B6FC2005A42BC /* DisplayImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewModel.swift; sourceTree = "<group>"; };
 		09E4C93325271372008E9448 /* Zoho Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoho Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +160,6 @@
 				09E4C94425271375008E9448 /* LaunchScreen.storyboard */,
 				09E4C94725271375008E9448 /* Info.plist */,
 				09E4C9862527B0C6008E9448 /* Zoho_Notes.xcdatamodel */,
-				09E4C97925278768008E9448 /* Reachability.swift */,
 			);
 			path = "Zoho Notes";
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				09E4C96A25271E4B008E9448 /* AddNewNotesView.swift */,
 				09E4C9712527327E008E9448 /* ViewNotesViewController.swift */,
 				09EF56F2252A4EE60064BEBF /* ViewImageViewController.swift */,
-				0941E0C9252B4C03005A42BC /* imageViewViewController.swift */,
 				0941E0CB252B6BEA005A42BC /* DisplayImageViewController.swift */,
 			);
 			path = Controller;
@@ -228,6 +224,7 @@
 		09E4C97F25278F52008E9448 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				09E4C97925278768008E9448 /* Reachability.swift */,
 				09E4C98025278F6F008E9448 /* NetworkAdapter.swift */,
 				09E4C98225279097008E9448 /* HTTPClass.swift */,
 			);
@@ -442,7 +439,6 @@
 				09E4C98125278F6F008E9448 /* NetworkAdapter.swift in Sources */,
 				094016572528CAA000D79294 /* AnimationController.swift in Sources */,
 				09E4C97A25278768008E9448 /* Reachability.swift in Sources */,
-				0941E0CA252B4C03005A42BC /* imageViewViewController.swift in Sources */,
 				09E4C98325279097008E9448 /* HTTPClass.swift in Sources */,
 				09E4C97025272931008E9448 /* NotesCollectionViewCell.swift in Sources */,
 				09E4C97C252787C5008E9448 /* NotesModel.swift in Sources */,

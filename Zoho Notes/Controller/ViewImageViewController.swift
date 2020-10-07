@@ -16,7 +16,7 @@ class ViewImageViewController: UIViewController {
     //MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-       // transitioningDelegate = self
+        // transitioningDelegate = self
         
         self.displayImage.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.

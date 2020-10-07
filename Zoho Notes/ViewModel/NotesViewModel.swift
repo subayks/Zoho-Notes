@@ -107,7 +107,7 @@ class NotesViewModel {
         return self.retrieveSavedUsers()
     }
     
-   //Method to store in core data
+    //Method to store in core data
     func saveUserData(user: NotesData,newUser:NSManagedObject) {
         newUser.setValue(user.title, forKey: "title")
         newUser.setValue(user.notes, forKey: "notes")

@@ -40,9 +40,9 @@ class DisplayImageViewController: UIViewController {
         swipeLeft.addTarget(self, action: #selector(swipeAction(sender:)))
         
         self.closeButton.frame = CGRect(x: self.view.frame.width - 45, y: 30, width: 30, height: 30)
-         closeButton.addTarget(self, action: #selector(self.closeAction), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(self.closeAction), for: .touchUpInside)
         self.displayImage.addSubview(self.closeButton)
-       
+        
         
         setupvalues()
         // Do any additional setup after loading the view.

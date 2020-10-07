@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControllerDelegate ,UINavigationControllerDelegate {
+class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControllerDelegate ,UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var notesTextView: UITextView!
@@ -20,7 +20,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
     public var completion: ((NotesData)-> Void)?
     var notesData = NotesData()
     let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSaveTapped))
-    let attachmentButton = UIBarButtonItem(title: "Pic", style: .done, target: self, action: #selector(didAttachmentTapped))
+    let attachmentButton = UIBarButtonItem(title: "Picture", style: .done, target: self, action: #selector(didAttachmentTapped))
     
     //MARK:- view life Cycle
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
         self.titleTextField.backgroundColor = .black
         self.notesTextView.backgroundColor = .black
         self.notesTextView.delegate = self
+        self.titleTextField.delegate = self
         self.notesTextView.text = "Type Something..."
         notesTextView.textColor = UIColor.lightGray
         titleTextField.becomeFirstResponder() 
@@ -40,7 +41,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
         self.imageViewTopConstraint.constant = 0
     }
     
-    
+    //MARK:- Textfield and textview Delegates
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
@@ -48,27 +49,48 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+        {
+            view.endEditing(true)
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+    
+    //MARK:- Action for attach
     @objc func didAttachmentTapped() {
         let photo = PHPhotoLibrary.authorizationStatus()
         if photo == .notDetermined {
             PHPhotoLibrary.requestAuthorization({ status in
                 if status == .authorized {
                     self.openGallary()
-                } else {
-                    
                 }
-                
             })
             
         } else {
             self.openGallary()
         }
     }
-    func openGallary()
-    {
-        picker!.allowsEditing = false
-        picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
-        present(picker!, animated: true, completion: nil)
+    
+    //MARK:- Open photos
+    func openGallary() {
+        self.titleTextField.resignFirstResponder()
+        DispatchQueue.main.async {
+            
+            self.picker!.allowsEditing = false
+            self.picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(self.picker!, animated: true, completion: nil)
+        }
     }
     
     @objc func didSaveTapped() {
@@ -85,6 +107,7 @@ class AddNewNotesView: UIViewController,UITextViewDelegate, UIImagePickerControl
             completion?(self.notesData)
         }
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let chosenImage =  UIImage.from(info: info)
         self.attachmentImage.image = chosenImage
