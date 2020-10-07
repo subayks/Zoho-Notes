@@ -42,9 +42,9 @@ class ViewNotesViewController: UIViewController,NVActivityIndicatorViewable {
             self.titleLabel.text = notesData.title
             let notes = viewModel.replaceUrl(notesData: notesData)
             
-            let renderer = MarkupRenderer(baseFont: .systemFont(ofSize: 16))
-            let attributedText = renderer.render(text: notes)
-            
+            let renderer = MarkupRenderer(baseFont: .systemFont(ofSize: 17))
+            let boldText = renderer.render(text: notes).string
+            let attributedText =  renderer.render(text: boldText)
             let linkedText = NSMutableAttributedString(attributedString: attributedText)
             
             let hyperlinked = linkedText.setAsLink(textToFind: viewModel.urlButtonName, linkURL: viewModel.url)

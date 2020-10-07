@@ -10,7 +10,6 @@ import UIKit
 
 class NotesCollectionViewCell: UICollectionViewCell {
     @IBOutlet var notesTitle :UILabel!
-    @IBOutlet var notesDetail : UILabel!
     @IBOutlet var date : UILabel!
     @IBOutlet weak var backGroundViewForCell: UIView!
 }

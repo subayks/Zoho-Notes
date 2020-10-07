@@ -22,7 +22,7 @@ class ViewController: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var collectionViewNotes: UICollectionView!
     //Button to add new note
     @IBOutlet weak var buttonAdd: UIButton!
-   //view model for this class
+    //view model for this class
     var notesViewModel = NotesViewModel()
     
     
@@ -55,28 +55,28 @@ class ViewController: UIViewController,NVActivityIndicatorViewable {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-     //MARK:- API Call
-        func makeApiCall() {
-            let size = CGSize(width: 50, height: 50)
-            self.startAnimating(size, message: "Loading", messageFont: .none, type: .ballScaleRippleMultiple, color: .white, fadeInAnimation: .none)
-            let finalURL = "https://raw.githubusercontent.com/RishabhRaghunath/JustATest/master/posts"
-            if Reachability.isConnectedToNetwork() {
-                
-                notesViewModel.getArticleResponse(withBaseURl: finalURL, withParameters: "", completionHandler: { (status: Bool?, errorMessage: String?, errorCode: String?)  -> Void in
-                    DispatchQueue.main.async {
-                        if status == true {
-                            print("Success")
-                            self.stopAnimating()
-                            self.collectionViewNotes.reloadData()
-                        }
+    //MARK:- API Call
+    func makeApiCall() {
+        let size = CGSize(width: 50, height: 50)
+        self.startAnimating(size, message: "Loading", messageFont: .none, type: .ballScaleRippleMultiple, color: .white, fadeInAnimation: .none)
+        let finalURL = "https://raw.githubusercontent.com/RishabhRaghunath/JustATest/master/posts"
+        if Reachability.isConnectedToNetwork() {
+            
+            notesViewModel.getArticleResponse(withBaseURl: finalURL, withParameters: "", completionHandler: { (status: Bool?, errorMessage: String?, errorCode: String?)  -> Void in
+                DispatchQueue.main.async {
+                    if status == true {
+                        print("Success")
+                        self.stopAnimating()
+                        self.collectionViewNotes.reloadData()
                     }
-                })
-            } else {
-                let alert = UIAlertController(title: "Alert", message: "Please check your internet connection", preferredStyle: UIAlertController.Style.alert)
-                          alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-                          self.present(alert, animated: true, completion: nil)
-            }
+                }
+            })
+        } else {
+            let alert = UIAlertController(title: "Alert", message: "Please check your internet connection", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
+    }
 }
 
 //MARK:- Extension for collection view delegates
@@ -86,7 +86,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,U
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.view.frame.width/3, height: 99)
+        return CGSize(width: self.collectionViewNotes.bounds.width/2 - 10, height: self.collectionViewNotes.bounds.height/2)
         
     }
     
@@ -96,10 +96,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,U
         cell.backGroundViewForCell?.layer.cornerRadius = 10
         cell.backGroundViewForCell?.clipsToBounds = true
         cell.notesTitle.text = self.notesViewModel.model[indexPath.row].title
-        cell.notesDetail.text = ""
         cell.date.text = self.notesViewModel.model[indexPath.row].date
-        cell.frame.size.width = self.view.frame.width / 3
-               cell.frame.size.height = self.view.frame.height / 3
+        cell.layoutIfNeeded()
         return cell
     }
     
@@ -113,25 +111,27 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,U
         vc.viewModel = self.notesViewModel.createViewNotesViewModel(index:indexPath.row)
         navigationController?.pushViewController(vc, animated: true)
     }
-   
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
+        return 10
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
+        return 5
     }
     //Set random colors for cell
     func randomColor() -> UIColor {
-        let red = CGFloat(drand48())
-        let green = CGFloat(drand48())
-        let blue = CGFloat(drand48())
-        return UIColor(red: red, green: green, blue: blue, alpha:1.0)
+        let redValue = CGFloat.random(in: 0...1)
+        let greenValue = CGFloat.random(in: 0...1)
+        let blueValue = CGFloat.random(in: 0...1)
+        return UIColor(red: redValue, green: greenValue, blue: blueValue, alpha:1.0)
         
     }
     
